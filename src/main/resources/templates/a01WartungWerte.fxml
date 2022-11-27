@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Group stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.c3.swe_automat.fxcontroller.A01ControllerWartungPreise">
+   <children>
+      <GridPane prefHeight="900.0" prefWidth="1400.0" styleClass="mainBackgroundColor">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" />
+            <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Pane prefWidth="200.0">
+
+               <VBox alignment="TOP_LEFT" prefHeight="0.0" prefWidth="534.0" styleClass="timeVBOX">
+                  <children>
+                     <Label fx:id="u01DayDate" styleClass="timeLabels" text="Label" />
+                     <Label fx:id="u01Time" styleClass="timeLabels" text="Label" />
+                  </children>
+               </VBox>
+
+               <children>
+                  <MFXButton layoutX="1025.0" mnemonicParsing="false" onAction="#abbrechenButton" prefHeight="76.0" prefWidth="375.0" styleClass="abbrechenButton" text="Abbrechen">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Text layoutX="26.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wartungsmodus">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+                  <Line endX="1268.0" layoutX="116.0" layoutY="82.0" startX="-100.0" />
+               </children>
+            </Pane>
+            <GridPane GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="900.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <MFXButton fx:id="werteAnpassenButton" layoutX="18.0" layoutY="7.0" mnemonicParsing="false" onAction="#werteButton" prefHeight="52.0" prefWidth="257.0" styleClass="adminNavButton" text="Werte anpassen">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton layoutX="18.0" layoutY="80.0" mnemonicParsing="false" onAction="#statistikButton" prefHeight="52.0" prefWidth="257.0" styleClass="adminNavButton" text="Statistik ansehen">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton layoutX="18.0" layoutY="153.0" mnemonicParsing="false" onAction="#speicherButton" prefHeight="52.0" prefWidth="257.0" styleClass="adminNavButton" text="Speicher auffüllen">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXToggleButton fx:id="toggleLockAutomat" contentDisplay="BOTTOM" graphicTextGap="1.0" layoutX="24.0" layoutY="597.0" onAction="#toggleLockStatus" prefHeight="73.0" prefWidth="169.0" text="Sperrmodus">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </MFXToggleButton>
+                        <Text layoutX="143.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ON">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="34.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OFF">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="639.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Automatischer Abbruch">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="639.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endscreen">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="639.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Access-Kombination">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="639.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Neues Passwort">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <TextField id="autoAbbruch" fx:id="autoAbbruch" layoutX="1100.0" layoutY="21.0" onKeyPressed="#resetTimer" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="endScreen" fx:id="endScreen" layoutX="1100.0" layoutY="70.0" onKeyPressed="#resetTimer" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="access" fx:id="access" layoutX="988.0" layoutY="119.0" onKeyPressed="#resetTimer" prefHeight="45.0" prefWidth="257.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="1258.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sekunden">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="1258.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sekunden">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <MFXButton layoutX="1264.0" layoutY="169.0" mnemonicParsing="false" onAction="#updateSettings" onKeyPressed="#resetTimer" prefHeight="44.0" prefWidth="64.0" styleClass="weiterButton" text="OK">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </MFXButton>
+                        <TextField id="adultA" fx:id="adultA" alignment="CENTER_RIGHT" layoutX="824.0" layoutY="418.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="childA" alignment="CENTER_RIGHT" layoutX="824.0" layoutY="477.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="seniorA" alignment="CENTER_RIGHT" layoutX="824.0" layoutY="536.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="discountA" alignment="CENTER_RIGHT" layoutX="824.0" layoutY="595.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="adultB" alignment="CENTER_RIGHT" layoutX="1001.0" layoutY="418.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="childB" alignment="CENTER_RIGHT" layoutX="1001.0" layoutY="477.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="seniorB" alignment="CENTER_RIGHT" layoutX="1001.0" layoutY="536.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="discountB" alignment="CENTER_RIGHT" layoutX="1001.0" layoutY="595.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="adultC" alignment="CENTER_RIGHT" layoutX="1177.0" layoutY="418.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="childC" alignment="CENTER_RIGHT" layoutX="1177.0" layoutY="477.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="seniorC" alignment="CENTER_RIGHT" layoutX="1177.0" layoutY="536.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <TextField id="adultA" fx:id="discountC" alignment="CENTER_RIGHT" layoutX="1177.0" layoutY="595.0" onKeyPressed="#resetTimer" onKeyTyped="#updatePrices" prefHeight="45.0" prefWidth="145.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <Text layoutX="821.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarifstufe A">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="998.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarifstufe B">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="1170.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarifstufe C">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="631.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erwachsene">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="631.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kinder">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="631.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senioren">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="631.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ermäßigt">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <PasswordField id="passwort" fx:id="passwort" layoutX="988.0" layoutY="169.0" onKeyPressed="#resetTimer" prefHeight="45.0" prefWidth="257.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font></PasswordField>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</Group>

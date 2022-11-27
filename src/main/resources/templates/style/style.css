@@ -1,0 +1,68 @@
+MFXButton{
+    -fx-text-fill: white;
+    -fx-background-color: gray;
+}
+
+ScrollPane{
+    -fx-background: #EFF7F6;
+    -fx-border-color: #EFF7F6;
+}
+
+.mainBackgroundColor{
+    -fx-background-color: #EFF7F6;
+}
+
+.list-cell{
+    -fx-font-size: 24;
+}
+
+.abbrechenButton{
+    -fx-background-color: red;
+    -fx-background-radius: 0 0 0 10px;
+}
+
+.abbrechenButton:hover{
+    -fx-background-color: linear-gradient(to top, #FF3838, #FC0000);
+    -fx-cursor: hand;
+}
+
+.weiterButton{
+    -mfx-button-type: RAISED;
+    -fx-background-color: #45B649;
+    -fx-background-radius: 10px;
+}
+
+.weiterButton:hover{
+    -fx-background-color: linear-gradient(to top, #52c234, #45B649);
+    -fx-cursor: hand;
+}
+
+.zurueckButton{
+    -mfx-button-type: RAISED;
+    -fx-background-color: gray;
+    -fx-background-radius: 10px;
+}
+
+.zurueckButton:hover{
+    -fx-background-color: linear-gradient(to top, #949494, #808080);
+    -fx-cursor: hand;
+}
+
+.adminNavButton{
+    -mfx-button-type: RAISED;
+    -fx-background-radius: 10px;
+}
+
+.adminNavButton:hover{
+    -fx-background-color: linear-gradient(to top, #949494, #808080);
+    -fx-cursor: hand;
+}
+
+.timeVBOX {
+    -fx-padding: 10px 0px 0px 20px;
+}
+
+.timeLabels {
+    -fx-font-size: 15pt;
+    -fx-font-family: "Calibri", "SansSerif";
+}

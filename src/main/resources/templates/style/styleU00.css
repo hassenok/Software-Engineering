@@ -1,0 +1,33 @@
+/*.body {*/
+/*    -fx-background-color: #D1E7E3;*/
+/*}*/
+.mainBackgroundColor{
+    -fx-background-color: #EFF7F6;
+}
+
+.hiddenButton {
+    -fx-text-fill: #EFF7F6;
+}
+
+.hiddenButton:hover {
+    /*-fx-cursor: hand;*/
+}
+
+.timeLabels {
+    -fx-font-size: 22pt;
+    -fx-font-family: "Calibri", "SansSerif";
+}
+
+.u00BuyTickets {
+    -fx-font-size: 35pt;
+    -mfx-button-type: RAISED;
+    -fx-background-color: #45B649;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+}
+
+.u00BuyTickets:hover {
+    /*-fx-border-color: linear-gradient(to top, #373B44, #4286f4);*/
+    -fx-background-color: linear-gradient(to top, #52c234, #45B649);
+    -fx-cursor: hand;
+}

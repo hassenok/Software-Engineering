@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" styleClass="mainBackgroundColor" stylesheets="@style/styleU00.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.c3.swe_automat.fxcontroller.U00UserStartseite">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="178.0" prefWidth="1400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#leftSecretButtonPressed" prefHeight="178.0" prefWidth="560.0" styleClass="hiddenButton, mainBackgroundColor" text="Unsichtbarer-Button_Links" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <VBox alignment="CENTER" prefHeight="171.0" prefWidth="534.0" HBox.hgrow="SOMETIMES">
+               <children>
+                  <Label fx:id="u00Time" styleClass="timeLabels" text="Label" />
+                  <Label fx:id="u00DayDate" styleClass="timeLabels" text="Label" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#rightSecretButtonPressed" prefHeight="213.0" prefWidth="560.0" styleClass="hiddenButton, mainBackgroundColor" text="Unsichtbarer-Button_Rechts" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <ImageView fitHeight="450.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../pictures/dvb_logo.png" />
+         </image>
+      </ImageView>
+   </top>
+   <center>
+      <VBox fx:id="middleBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="ticketKaufenButtonb2" mnemonicParsing="false" onAction="#u01ButtonPressed" styleClass="u00BuyTickets" text="Tickets kaufen" />
+            <Label fx:id="lblAusserBetrieb" text="Automat außer Betrieb!">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<Group stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="com.c3.swe_automat.fxcontroller.A03ControllerWartungSpeicher">
+    <children>
+        <GridPane prefHeight="900.0" prefWidth="1400.0" styleClass="mainBackgroundColor">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0"/>
+                <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Pane prefWidth="200.0">
+
+                    <VBox alignment="TOP_LEFT" prefHeight="0.0" prefWidth="534.0" styleClass="timeVBOX">
+                        <children>
+                            <Label fx:id="u01DayDate" styleClass="timeLabels" text="Label"/>
+                            <Label fx:id="u01Time" styleClass="timeLabels" text="Label"/>
+                        </children>
+                    </VBox>
+
+                    <children>
+                        <MFXButton layoutX="1025.0" mnemonicParsing="false" onAction="#abbrechenButton"
+                                   prefHeight="76.0" prefWidth="375.0" styleClass="abbrechenButton" text="Abbrechen">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </MFXButton>
+                    </children>
+                </Pane>
+                <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                    <children>
+                        <Text layoutX="26.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wartungsmodus">
+                            <font>
+                                <Font size="50.0"/>
+                            </font>
+                        </Text>
+                        <Line endX="1268.0" layoutX="116.0" layoutY="82.0" startX="-100.0"/>
+                    </children>
+                </Pane>
+                <GridPane GridPane.rowIndex="2">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="900.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <MFXButton layoutX="18.0" layoutY="7.0" mnemonicParsing="false" onAction="#werteButton"
+                                           prefHeight="52.0" prefWidth="257.0" styleClass="adminNavButton"
+                                           text="Werte anpassen">
+                                    <font>
+                                        <Font size="25.0"/>
+                                    </font>
+                                </MFXButton>
+                                <MFXButton layoutX="18.0" layoutY="80.0" mnemonicParsing="false"
+                                           onAction="#statistikButton" prefHeight="52.0" prefWidth="257.0"
+                                           styleClass="adminNavButton" text="Statistik ansehen">
+                                    <font>
+                                        <Font size="25.0"/>
+                                    </font>
+                                </MFXButton>
+                                <MFXButton fx:id="btnSpeicherFuellen" layoutX="18.0" layoutY="153.0"
+                                           mnemonicParsing="false" onAction="#speicherButton" prefHeight="52.0"
+                                           prefWidth="257.0" styleClass="adminNavButton" text="Speicher auffüllen">
+                                    <font>
+                                        <Font size="25.0"/>
+                                    </font>
+                                </MFXButton>
+                                <TextField fx:id="ct5" disable="true" layoutX="203.0" layoutY="350.0" prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <Text layoutX="6.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 Cent"
+                                      textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="6.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="10 Cent" textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="6.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="20 Cent" textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="6.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="50 Cent" textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="6.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 Euro"
+                                      textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="6.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 Euro"
+                                      textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <TextField fx:id="ct10" disable="true" layoutX="203.0" layoutY="403.0" prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="ct20" disable="true" layoutX="203.0" layoutY="458.0" prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="ct50" disable="true" layoutX="203.0" layoutY="509.0" prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="ct100" disable="true" layoutX="203.0" layoutY="562.0"
+                                           prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="ct200" disable="true" layoutX="203.0" layoutY="615.0"
+                                           prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <Button layoutX="375.0" layoutY="350.0" mnemonicParsing="false" onAction="#emptyAll0005"
+                                        prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="429.0" layoutY="350.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne0005" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="483.0" layoutY="350.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne0005" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="537.0" layoutY="350.0" mnemonicParsing="false" onAction="#fillAll0005"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="375.0" layoutY="403.0" mnemonicParsing="false" onAction="#emptyAll0010"
+                                        prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="429.0" layoutY="403.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne0010" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="483.0" layoutY="403.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne0010" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="537.0" layoutY="403.0" mnemonicParsing="false" onAction="#fillAll0010"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="375.0" layoutY="458.0" mnemonicParsing="false" onAction="#emptyAll0020"
+                                        prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="429.0" layoutY="458.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne0020" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="483.0" layoutY="458.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne0020" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="537.0" layoutY="458.0" mnemonicParsing="false" onAction="#fillAll0020"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="375.0" layoutY="509.0" mnemonicParsing="false" onAction="#emptyAll0050"
+                                        prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="429.0" layoutY="509.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne0050" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="483.0" layoutY="509.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne0050" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="537.0" layoutY="509.0" mnemonicParsing="false" onAction="#fillAll0050"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="375.0" layoutY="562.0" mnemonicParsing="false" onAction="#emptyAll0100"
+                                        prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="429.0" layoutY="562.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne0100" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="483.0" layoutY="562.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne0100" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="537.0" layoutY="562.0" mnemonicParsing="false" onAction="#fillAll0100"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="375.0" layoutY="615.0" mnemonicParsing="false" onAction="#emptyAll0200"
+                                        prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="429.0" layoutY="615.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne0200" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="483.0" layoutY="615.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne0200" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="537.0" layoutY="615.0" mnemonicParsing="false" onAction="#fillAll0200"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="ct500" disable="true" layoutX="884.0" layoutY="354.0"
+                                           prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <Text layoutX="687.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="5 Euro" textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="687.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="10 Euro" textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="687.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="20 Euro" textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="687.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="50 Euro" textAlignment="RIGHT" wrappingWidth="169.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <TextField fx:id="ct1000" disable="true" layoutX="884.0" layoutY="407.0"
+                                           prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="ct2000" disable="true" layoutX="884.0" layoutY="460.0"
+                                           prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="ct5000" disable="true" layoutX="884.0" layoutY="513.0"
+                                           prefHeight="45.0"
+                                           prefWidth="155.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <Button layoutX="1056.0" layoutY="354.0" mnemonicParsing="false"
+                                        onAction="#emptyAll0500" prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1110.0" layoutY="354.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne0500" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1164.0" layoutY="354.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne0500" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1218.0" layoutY="354.0" mnemonicParsing="false" onAction="#fillAll0500"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1056.0" layoutY="407.0" mnemonicParsing="false"
+                                        onAction="#emptyAll1000" prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1110.0" layoutY="407.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne1000" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1164.0" layoutY="407.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne1000" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1218.0" layoutY="407.0" mnemonicParsing="false" onAction="#fillAll1000"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1056.0" layoutY="460.0" mnemonicParsing="false"
+                                        onAction="#emptyAll2000" prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1110.0" layoutY="460.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne2000" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1164.0" layoutY="460.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne2000" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1218.0" layoutY="460.0" mnemonicParsing="false" onAction="#fillAll2000"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1056.0" layoutY="513.0" mnemonicParsing="false"
+                                        onAction="#emptyAll5000" prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1110.0" layoutY="513.0" mnemonicParsing="false"
+                                        onAction="#reduceByOne5000" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1164.0" layoutY="513.0" mnemonicParsing="false"
+                                        onAction="#increaseByOne5000" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1218.0" layoutY="513.0" mnemonicParsing="false" onAction="#fillAll5000"
+                                        prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                                <Text layoutX="38.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Münzenspeicher" wrappingWidth="274.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Text layoutX="719.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Scheinspeicher" wrappingWidth="274.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <TextField fx:id="papierSpeicherText" layoutX="1060.0" layoutY="139.0" prefHeight="45.0"
+                                           prefWidth="198.0">
+                                    <font>
+                                        <Font size="23.0"/>
+                                    </font>
+                                </TextField>
+                                <Text layoutX="826.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Papierspeicher" textAlignment="RIGHT" wrappingWidth="209.0">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                </Text>
+                                <Button layoutX="1056.0" layoutY="193.0" mnemonicParsing="false"
+                                        onAction="#removeAllPaper" prefHeight="45.0" prefWidth="45.0" text="--">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1110.0" layoutY="193.0" mnemonicParsing="false"
+                                        onAction="#removeOnePaper" prefHeight="45.0" prefWidth="45.0" text="-">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1164.0" layoutY="193.0" mnemonicParsing="false"
+                                        onAction="#increaseOnePaper" prefHeight="45.0" prefWidth="45.0" text="+">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="1218.0" layoutY="193.0" mnemonicParsing="false"
+                                        onAction="#fillAllPaper" prefHeight="45.0" prefWidth="45.0" text="++">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                    </children>
+                </GridPane>
+            </children>
+        </GridPane>
+    </children>
+</Group>

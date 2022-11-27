@@ -1,0 +1,30 @@
+AutoCompleteTextField{
+    -fx-font-size: 24px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 50px;
+    -fx-border-color: #42766E;
+    -fx-background-color: #A9D3CC;
+    -fx-background-radius: 50px;
+    -fx-font-weight: 100;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 0);
+}
+
+.ticketRectangle{
+    -fx-stroke-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 0);
+}
+
+.ticketCount{
+    -fx-stroke-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 0);
+}
+
+.roundButton{
+    -mfx-button-type: RAISED;
+    -fx-background-radius: 100%;
+    -mfx-animate-background: false;
+}
+
+.roundButton:hover{
+    -fx-cursor: hand;
+}
