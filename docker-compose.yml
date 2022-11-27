@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  swepostgres:
+    image: postgres
+    hostname: swedb
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_USER: swe
+      POSTGRES_DB: swe
+    restart: unless-stopped
+
